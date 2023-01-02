@@ -215,6 +215,7 @@ function ItemSummary({item, prices, period, setPeriod}) {
                                 <Box sx={{pr: '1em', pt: '1em'}}>
                                     <ToggleButtonGroup
                                         color="primary"
+                                        size={"small"}
                                         value={period}
                                         exclusive
                                         aria-label="period"
