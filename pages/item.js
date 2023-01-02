@@ -16,9 +16,10 @@ function ItemDetails({item}) {
 
     useEffect(() => {
         if (item) {
+            console.log(period)
             axios.get(`${config.url}/api/v1/items/prices/${item?.id}`, {
                 params: {
-                    from: subMonths(new Date, period).toISOString(),
+                    from: subMonths(new Date(), period).toISOString(),
                     to: new Date().toISOString()
                 }
             })

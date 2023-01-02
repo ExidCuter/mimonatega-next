@@ -219,7 +219,9 @@ function ItemSummary({item, prices, period, setPeriod}) {
                                         exclusive
                                         aria-label="period"
                                         onChange={(event, value) => {
-                                            setPeriod(value);
+                                            if (value) {
+                                                setPeriod(value);
+                                            }
                                         }}
                                     >
                                         <ToggleButton value={3}>Zadnje 3 mesece</ToggleButton>
