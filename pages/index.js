@@ -98,7 +98,7 @@ function Home() {
                         <Grid item md={2}></Grid>
                         <Grid item md={8} xs={12}>
                             <Typography sx={{mt: '1em'}} variant={"subtitle1"}>Na voljo tudi vtičnik za brskalnike!</Typography>
-                            <Button sx={{mt: '1em'}} component={Link} href={"https://github.com/ExidCuter/mimonatega-ext"} color="secondary" variant={"outlined"} endIcon={<Extension></Extension>}>PRENESI VRIčnik</Button>
+                            <Button sx={{mt: '1em'}} component={Link} href={"https://github.com/ExidCuter/mimonatega-ext"} color="secondary" variant={"outlined"} endIcon={<Extension></Extension>}>PRENESI VTIčnik</Button>
                         </Grid>
                         <Grid item md={2}></Grid>
                     </Grid>
