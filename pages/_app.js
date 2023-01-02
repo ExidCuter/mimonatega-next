@@ -1,5 +1,19 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import {createTheme, CssBaseline, ThemeProvider, useMediaQuery} from "@mui/material";
+
+
+export default function App({Component, pageProps}) {
+    const isDarkModeEnabled = useMediaQuery('(prefers-color-scheme: dark)');
+    const darkTheme = createTheme({
+        palette: {
+            mode: isDarkModeEnabled ? 'dark' : 'light',
+        },
+    })
+    return (
+        <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
+            <Component {...pageProps} />
+        </ThemeProvider>
+    )
 }
