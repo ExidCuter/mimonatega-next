@@ -108,7 +108,7 @@ export default function MimonategaBar({search}) {
                             </>
                         )}
                         {matches && (
-                            <Button component={Link} href={"https://github.com/ExidCuter/mimonatega-ext"}
+                            <Button component={Link} href={"https://github.com/ExidCuter/mimonatega-next"}
                                     color="inherit" variant={"outlined"}><GitHub/></Button>
                         )}
                         <Button component={Link} href={"/about"} color={"inherit"}
