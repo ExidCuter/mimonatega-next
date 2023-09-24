@@ -49,7 +49,7 @@ function ItemSummary({item, prices, period, setPeriod}) {
     const getCurrentPrice = () => {
         prices.sort((a, b) => (new Date(a.parsedAt) > new Date(b.parsedAt)) ? 1 : -1)
 
-        return prices[prices.length - 1].price;
+        return prices?.at(-1)?.price || 0;
     }
 
     const getCategoryLabel = () => {
@@ -59,6 +59,8 @@ function ItemSummary({item, prices, period, setPeriod}) {
             category :
             category.substr(0, 17) + "...";
     }
+
+    console.log(prices)
 
     return (
         <div>
@@ -134,8 +136,8 @@ function ItemSummary({item, prices, period, setPeriod}) {
                                                 <TableCell align="left">
                                                     <Chip
                                                         variant={"outlined"}
-                                                        label={prices[prices.length - 1].onSale ? 'Da' : 'Ne'}
-                                                        color={prices[prices.length - 1].onSale ? 'primary' : 'secondary'}/>
+                                                        label={prices?.at(-1)?.onSale ? 'Da' : 'Ne'}
+                                                        color={prices?.at(-1)?.onSale ? 'primary' : 'secondary'}/>
 
 
                                                 </TableCell>
@@ -147,8 +149,8 @@ function ItemSummary({item, prices, period, setPeriod}) {
                                                 <TableCell align="left">
                                                     <Chip
                                                         variant={"outlined"}
-                                                        label={prices[prices.length - 1].inPromotion ? 'Da' : 'Ne'}
-                                                        color={prices[prices.length - 1].inPromotion ? 'primary' : 'secondary'}/>
+                                                        label={prices?.at(-1)?.inPromotion ? 'Da' : 'Ne'}
+                                                        color={prices?.at(-1)?.inPromotion ? 'primary' : 'secondary'}/>
 
                                                 </TableCell>
                                             </TableRow>
