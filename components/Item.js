@@ -15,7 +15,7 @@ function ItemsList({item}) {
             <CardActionArea onClick={() => itemClicked(item.itemUrl)}>
                 <CardMedia>
                     <Box align="center" justify="center" alignItems="center">
-                        <Image src={item.image + "/200/200"} alt={item.name} width={200} height={200} style={{marginTop: 20, width: 'auto', height: '150px'}}/>
+                        <img src={item.image + "/200/200"} alt={item.name} width={200} height={200} style={{marginTop: 20, width: 'auto', height: '150px'}}/>
                     </Box>
                 </CardMedia>
                 <CardContent sx={{height: 170}}>
