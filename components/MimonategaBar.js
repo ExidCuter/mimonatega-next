@@ -103,7 +103,7 @@ export default function MimonategaBar({search}) {
                             <>
                                 <Divider orientation={"vertical"} variant={"middle"} flexItem></Divider>
                                 <Button component={Link} href={"https://github.com/ExidCuter/mimonatega-ext"}
-                                        color="primary" variant={"outlined"}><Extension/></Button>
+                                        color={"inherit"} variant={"outlined"}><Extension/></Button>
                                 <Divider orientation={"vertical"} variant={"middle"} flexItem></Divider>
                             </>
                         )}
